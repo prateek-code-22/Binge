@@ -109,7 +109,9 @@ class _MoviePageState extends State<MoviePage> {
           title: searchBar,
         ),
         body: (movies != null && movies.isNotEmpty)
-            ? ListView.builder(
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
                 itemCount: (this.movieCount == null) ? 0 : movieCount,
                 itemBuilder: (BuildContext context, int position) {
                   if (movies[position].posterPath != null) {
@@ -127,31 +129,43 @@ class _MoviePageState extends State<MoviePage> {
                       Navigator.push(context, route);
                     },
                     child: Card(
-                      color: Color(0xffE1E1E1),
-                      elevation: 3.0,
+                      color: Colors.grey[900],
+                      elevation: 0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
-                      child: ListTile(
-                        leading: CircleAvatar(
-                          backgroundImage: image,
-                          radius: 32.0,
-                        ).p0(),
-                        title: Text(
-                          movies[position].title,
-                          style: TextStyle(fontWeight: FontWeight.w800),
+                      child: GridTile(
+                        child: Stack(
+                          //mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              color: Colors.grey[900],
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width,
+                              child: Image(
+                                image: image,
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                            Container(
+                              height: 40.0,
+                              width: 240.0,
+                              color: Colors.grey[900],
+                              child: Text(
+                                movies[position].title,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 16.0,
+                                ),
+                              ).p12(),
+                            ),
+                          ],
                         ),
-                        subtitle: Text(
-                          'Release date: ' +
-                              movies[position].releaseDate +
-                              '\n'
-                                  'Vote: ' +
-                              movies[position].voteAverage.toString(),
-                          style: TextStyle(fontWeight: FontWeight.w600),
-                        ),
-                      ).p4(),
+                      ),
                     ).p8(),
-                  ).p0();
+                  );
                 },
               ).p16().pOnly(top: 16.0)
             : Center(

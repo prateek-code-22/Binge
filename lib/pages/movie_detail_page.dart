@@ -81,7 +81,7 @@ class MovieDetailPage extends StatelessWidget {
                     child: Image.network(
                       posterPath(),
                     ),
-                  ).p64(),
+                  ).p32(),
 
                   //CONTAINER FOR MOVIE TITLE
                   Container(
@@ -109,17 +109,61 @@ class MovieDetailPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0),
                     ),
-                    elevation: 3.0,
+                    elevation: 2.0,
                     color: Colors.transparent,
-                    child: Text(
-                      movie.overview,
-                      style: TextStyle(
-                        fontSize: 18.0,
-                        fontStyle: FontStyle.normal,
-                        fontFamily: GoogleFonts.poppins().fontFamily,
-                        color: Colors.white,
-                      ),
-                    ).p20(),
+                    child: Column(
+                      children: [
+                        Text(
+                          movie.overview,
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontStyle: FontStyle.normal,
+                            fontFamily: GoogleFonts.poppins().fontFamily,
+                            color: Colors.white,
+                          ),
+                        ).p20(),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Released Date: ',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20.0,
+                              ),
+                            ),
+                            Text(
+                              movie.releaseDate.toString(),
+                              style: TextStyle(
+                                color: Colors.amber[600],
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ).pOnly(left: 22.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Vote: ',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20.0,
+                              ),
+                            ),
+                            Text(
+                              movie.voteAverage.toString(),
+                              style: TextStyle(
+                                color: Colors.amber[600],
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ).p4().pOnly(bottom: 8, left: 20),
+                      ],
+                    ),
                   ).pOnly(
                     top: 18.0,
                     left: 18.0,
