@@ -6,9 +6,9 @@ A Movie app which uses tmdb api for fetching movie details.
 ## 📸 ScreenShots
 
 <p>
-<img src="https://github.com/prateek-code-22/Binge/blob/Listview/outputImages/s1.png" alt="Home Screen" width="250">
-<img src="https://github.com/prateek-code-22/Binge/blob/Listview/outputImages/s2.png" alt="Movie Page" width="250">
-<img src="https://github.com/prateek-code-22/Binge/blob/Listview/outputImages/s3.png" alt="Movie Page 2" width="250">
+<img src="https://github.com/prateek-code-22/Binge/blob/Gridview/output/s1.png" alt="Home Screen" width="250">
+<img src="https://github.com/prateek-code-22/Binge/blob/Gridview/output/s2.png" alt="Movie Page" width="250">
+<img src="https://github.com/prateek-code-22/Binge/blob/Gridview/output/s3.png" alt="Movie Page 2" width="250">
 <img src="https://github.com/prateek-code-22/Binge/blob/Gridview/output/Screenshot_1623660981.png" alt="Search Page" width="250">
 <img src="https://github.com/prateek-code-22/Binge/blob/Gridview/output/Screenshot_1623661093.png" alt="Search Result" width="250">
  <img src="https://github.com/prateek-code-22/Binge/blob/Gridview/output/Screenshot_1623661101.png" alt="Search Result" width="250">
