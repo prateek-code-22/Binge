@@ -1,6 +1,23 @@
-# binge
+# Binge
 
-A new Flutter project.
+A Movie app which uses tmdb api for fetching movie details.
+
+
+## 📸 ScreenShots
+
+<p>
+<img src="https://github.com/prateek-code-22/Binge/blob/Listview/outputImages/s1.png" alt="Home Screen" width="250">
+<img src="https://github.com/prateek-code-22/Binge/blob/Listview/outputImages/s2.png" alt="Movie Page" width="250">
+<img src="https://github.com/prateek-code-22/Binge/blob/Listview/outputImages/s3.png" alt="Movie Page 2" width="250">
+<img src="https://github.com/prateek-code-22/Binge/blob/Gridview/output/Screenshot_1623660981.png" alt="Search Page" width="250">
+<img src="https://github.com/prateek-code-22/Binge/blob/Gridview/output/Screenshot_1623661093.png" alt="Search Result" width="250">
+ <img src="https://github.com/prateek-code-22/Binge/blob/Gridview/output/Screenshot_1623661101.png" alt="Search Result" width="250">
+</p>
+
+
+## Demo 
+
+https://user-images.githubusercontent.com/61473947/121862577-8e957200-cd18-11eb-92d2-ae9d088d6ba1.mp4
 
 ## Getting Started
 
